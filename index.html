@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilo.css">
+  <title>Landing Page Arquitetura</title>
+</head>
+
+<body>
+
+  <header id="topo">
+    <div class="conteiner">
+      <h1 class="titulo-topo">Tradição em projetos de arquitetura</h1>
+      <p class="subtitulo-topo">Arquitetura residencial e comercial.</p>
+    </div>
+  </header>
+
+<section class="metricas-container">
+    <div class="metrica-item">
+        <h2>850</h2>
+        <p>empreendimentos construídos</p>
+    </div>
+
+    <div class="metrica-item">
+        <h2>40</h2>
+        <p>anos de mercado e experiência</p>
+    </div>
+
+    <div class="metrica-item">
+        <h2>2,000,000</h2>
+        <p>m² em projetos construídos</p>
+    </div>
+</section>
+
+  
+  <main>
+
+    <section class="sobre-container">
+    <div class="sobre-texto">
+        <h1>Arquitetos com História e Experiência.</h1>
+
+        <p>
+            Nós realizamos desde 2002 projetos e gerenciamento de obras.
+            Com mais de 800 projetos e 2.000.000 de m² construídos, tendo
+            como principal proposta transformar em realidade os sonhos de
+            seus clientes, criando projetos personalizados, unindo a tradição
+            e a modernidade em nossos projetos.
+        </p>
+    </div>
+
+          <div class="sobre-img">
+        <img src="imagens/sala.svg" alt="Projeto Arquitetônico">
+    </div>
+</section>
+
+    <section id="contato">
+      <div class="conteiner bloco-contato">
+        <h3>Conheça mais sobre nossos serviços:</h3><br>
+
+        <form id="formulario" class="formulario-grid" novalidate>
+          <div class="campo">
+           
+            <input id="nome" name="nome" required minlength="3" placeholder="Nome">
+            <small class="erro"></small>
+          </div>
+          <br>
+          <div class="campo">
+           
+            <input id="email" name="email" type="email" required placeholder="Email">
+            <small class="erro"></small>
+          </div>
+
+         <br><br><br> <button class="botao" type="submit">Fale Conosco</button>
+          <p id="mensagem" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --fundo-escuro: #303030;
+  --fundo-escuro-2: #262626;
+  --fundo-claro: #ffffff;
+  --texto-claro: #f5f5f5;
+  --texto-escuro: #222222;
+  --texto-suave: #6c6c6c;
+  --destaque: #d8871f;
+  --borda: #d0d7e2;
+}
+
+.conteiner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* TOPO */
+#topo {
+  background-color: var(--fundo-escuro);
+  color: var(--texto-claro);
+  padding: 80px 0 110px;
+}
+
+.titulo-topo {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.subtitulo-topo {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ---- SEÇÃO SOBRE (TEXTO + IMAGEM) ---- */
+.sobre-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Texto à esquerda e imagem à direita */
+    align-items: center;
+    padding: 80px 120px; /* Espaçamento igual ao estilo do layout */
+    gap: 80px; /* Distância entre texto e imagem */
+}
+
+/* ---- COLUNA DO TEXTO ---- */
+.sobre-texto {
+    max-width: 600px; /* Limita a largura para manter a leitura agradável */
+}
+
+.sobre-texto h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.sobre-texto p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ---- COLUNA DA IMAGEM ---- */
+.sobre-img img {
+    width: 420px;
+    border-radius: 18px; /* Cantos arredondados iguais ao da imagem enviada */
+    object-fit: cover;
+}
+
+/* ---- RESPONSIVIDADE ---- */
+@media (max-width: 950px) {
+    .sobre-container {
+        flex-direction: column; /* Empilha (texto em cima, imagem embaixo) */
+        padding: 50px 30px;
+        text-align: center; /* Centraliza no mobile */
+    }
+
+    .sobre-texto h1 {
+        font-size: 32px;
+    }
+
+    .sobre-texto p {
+        font-size: 16px;
+    }
+
+    .sobre-img img {
+        width: 100%;
+        max-width: 450px;
+    }
+}
+
+
+/* CONTATO */
+#contato {
+  background: var(--fundo-escuro-2);
+  padding: 60px 0 80px;
+  color: var(--texto-claro);
+  text-align: center;
+}
+
+.formulario-grid {
+  max-width: 380px;
+  margin: 0 auto;
+  display: grid;
+  gap: 14px;
+}
+
+.campo {
+  text-align: left;
+  display: grid;
+  gap: 6px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--borda);
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: #a0a0a0;
+}
+
+.botao {
+  background: var(--destaque);
+  color: white;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.botao:hover {
+  filter: brightness(0.9);
+}
+
+.erro {
+  color: #ffb4b4;
+  font-size: 12px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .cartao-sobre {
+    grid-template-columns: 1fr;
+    padding: 40px 28px;
+  }
+}
+
+
+/* ----- SEÇÃO DE MÉTRICAS ----- */
+/* Container geral da seção */
+.metricas-container {
+    width: 100%;
+    background-color: #f7f7f7;       /* Fundo cinza claro igual ao exemplo */
+    display: flex;
+    justify-content: space-around;   /* Espaço uniforme entre os itens */
+    align-items: center;
+    padding: 60px 20px;              /* Espaçamento vertical da seção */
+    border-top: 3px solid #333;      /* Linha escura superior (igual à imagem) */
+}
+
+/* Cada item individual (número + descrição) */
+.metrica-item {
+    text-align: center;
+}
+
+/* Estilo do número principal */
+.metrica-item h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 8px;              /* Espaço entre número e texto */
+}
+
+/* Estilo do texto descritivo */
+.metrica-item p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* ----- RESPONSIVIDADE ----- */
+/* Ajuste para telas menores (celulares) */
+@media (max-width: 768px) {
+    .metricas-container {
+        flex-direction: column;      /* Itens um abaixo do outro */
+        gap: 40px;                   /* Espaço entre os itens */
+        padding: 40px 20px;
+    }
+
+    .metrica-item h2 {
+        font-size: 40px;
+    }
+
+    .metrica-item p {
+        font-size: 15px;
+    }
+}
